@@ -31,11 +31,11 @@
 /*
  * Constructors
  */
-IO2::IO2(uint8_t addr) {
+IO2::IO2(uint8_t addr, uint8_t sda = SDA, uint8_t scl = SCL) {
   address = addr;
   error = IO2_SUCCESS;
 
-  Wire.begin();
+  Wire.begin(sda, scl);
 }
 
 bool IO2::hasError() {
