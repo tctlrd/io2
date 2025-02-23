@@ -97,7 +97,7 @@ class IO2 {
 		void regWrite(uint8_t reg, uint8_t value);
 
 	public:
-		IO2(uint8_t addr = DEFAULT_ADDRESS);
+		IO2(uint8_t addr = DEFAULT_ADDRESS, uint8_t sda = SDA, uint8_t scl = SCL);
 
         bool hasError();
         uint8_t getError();
@@ -119,4 +119,5 @@ class IO2 {
 		void pwmSet (uint8_t pin, uint8_t duty);
 		void pwmOff (uint8_t pin);
 };
+
 #endif
