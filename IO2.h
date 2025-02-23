@@ -83,6 +83,14 @@
 #define PWM1          0x51
 #define PWM2          0x52
 
+#ifndef SDA
+#define SDA 21
+#endif
+
+#ifndef SCL
+#define SCL 22
+#endif
+
 class IO2 {
 	protected:
 		uint8_t address;
