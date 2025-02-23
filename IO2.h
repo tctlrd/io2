@@ -26,8 +26,8 @@
 #ifndef IO2_H
 #define IO2_H
 
-#include <Arduino.h>
 #include <inttypes.h>
+#include <Arduino.h>
 
 #define DEFAULT_ADDRESS   0x21
 #define IO2_BOARD_ID      0x23
@@ -84,14 +84,6 @@
 #define PWM1          0x51
 #define PWM2          0x52
 
-#ifndef IO2_SDA
-#define IO2_SDA SDA // Default SDA pin, change if needed
-#endif
-
-#ifndef IO2_SCL
-#define IO2_SCL SCL // Default SCL pin, change if needed
-#endif
-
 class IO2 {
 	protected:
 		uint8_t address;
@@ -106,7 +98,7 @@ class IO2 {
 		void regWrite(uint8_t reg, uint8_t value);
 
 	public:
-		IO2(uint8_t addr = DEFAULT_ADDRESS, uint8_t sda = IO2_SDA, uint8_t scl = IO2_SCL);
+		IO2(uint8_t addr = DEFAULT_ADDRESS, uint8_t sda = SDA, uint8_t scl = SCL);
 
         bool hasError();
         uint8_t getError();
