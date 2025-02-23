@@ -31,7 +31,7 @@
 /*
  * Constructors
  */
-IO2::IO2(uint8_t addr, uint8_t sda = SDA, uint8_t scl = SCL) {
+IO2::IO2(uint8_t addr, uint8_t sda, uint8_t scl) {
   address = addr;
   error = IO2_SUCCESS;
 
