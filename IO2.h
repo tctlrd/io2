@@ -84,11 +84,11 @@
 #define PWM2          0x52
 
 #ifndef SDA
-#define SDA 21
+#define SDA 21 // Default SDA pin, change if needed
 #endif
 
 #ifndef SCL
-#define SCL 22
+#define SCL 22 // Default SCL pin, change if needed
 #endif
 
 class IO2 {
