@@ -26,6 +26,7 @@
 #ifndef IO2_H
 #define IO2_H
 
+#include <Arduino.h>
 #include <inttypes.h>
 
 #define DEFAULT_ADDRESS   0x21
@@ -84,11 +85,11 @@
 #define PWM2          0x52
 
 #ifndef IO2_SDA
-#define IO2_SDA 21 // Default SDA pin, change if needed
+#define IO2_SDA SDA // Default SDA pin, change if needed
 #endif
 
 #ifndef IO2_SCL
-#define IO2_SCL 22 // Default SCL pin, change if needed
+#define IO2_SCL SCL // Default SCL pin, change if needed
 #endif
 
 class IO2 {
