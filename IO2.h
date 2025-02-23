@@ -83,12 +83,12 @@
 #define PWM1          0x51
 #define PWM2          0x52
 
-#ifndef SDA
-#define SDA 21 // Default SDA pin, change if needed
+#ifndef IO2_SDA
+#define IO2_SDA 21 // Default SDA pin, change if needed
 #endif
 
-#ifndef SCL
-#define SCL 22 // Default SCL pin, change if needed
+#ifndef IO2_SCL
+#define IO2_SCL 22 // Default SCL pin, change if needed
 #endif
 
 class IO2 {
@@ -105,7 +105,7 @@ class IO2 {
 		void regWrite(uint8_t reg, uint8_t value);
 
 	public:
-		IO2(uint8_t addr = DEFAULT_ADDRESS, uint8_t sda = SDA, uint8_t scl = SCL);
+		IO2(uint8_t addr = DEFAULT_ADDRESS, uint8_t sda = IO2_SDA, uint8_t scl = IO2_SCL);
 
         bool hasError();
         uint8_t getError();
